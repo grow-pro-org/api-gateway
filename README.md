@@ -1,21 +1,11 @@
-# glap API Gateway
+# API Gateway
 
-Krakend Api gateway for the glab project. 
-
-# Build
-
-```
-docker build -t krakend .
-```
+Nginx configurtation  
 
 # Run
 
 ```
-docker run -v $PWD/config:/krakend/config -p 8080:8080 --name=krakend -d --rm krakend krakend run -d -c /krakend/config/krakend.json
-
+docker run --rm -v ${PWD}/conf.d:/etc/nginx/conf.d -p 8080:8080 -d nginx
 ```
-
-# Configuration
-
 
 
